@@ -31,3 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
     alert(greeting);
 
     // === 4. Back to Top Button ===
+    const topBtn = document.getElementById("topBtn");
+
+    if (topBtn) {
+        window.onscroll = function () {
+            topBtn.style.display =
+                document.documentElement.scrollTop > 300 ? "block" : "none";
+        };
+
+        topBtn.onclick = function () {
+            document.documentElement.scrollTop = 0;
+        };
+    }
+});
