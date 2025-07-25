@@ -1,46 +1,47 @@
-// Wait for the page to fully load
-document.addEventListener("DOMContentLoaded", function () {
-    // === 1. Image Hover Zoom ===
-    const images = document.querySelectorAll(".box1-img");
-    images.forEach((img) => {
-        img.style.transition = "transform 0.3s ease-in-out";
-        img.addEventListener("mouseover", () => {
-            img.style.transform = "scale(1.05)";
-        });
-        img.addEventListener("mouseout", () => {
-            img.style.transform = "scale(1)";
-        });
-    });
+// Scroll to top button
+const topBtn = document.getElementById("topBtn");
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-    // === 2. Sticky Navbar ===
-    window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        navbar.classList.toggle("sticky", window.scrollY > 50);
-    });
+// Alert on "see more" links
+document.querySelectorAll('.box-content p a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("More content coming soon!");
+  });
+});
 
-    // === 3. Time-Based Greeting ===
-    const hour = new Date().getHours();
-    let greeting;
-    if (hour < 12) {
-        greeting = "Good Morning! Welcome to TS_STORE!";
-    } else if (hour < 18) {
-        greeting = "Good Afternoon! Welcome back!";
+// Monitor search bar input
+const searchInput = document.querySelector('.search-input');
+searchInput.addEventListener('input', () => {
+  console.log("User typing:", searchInput.value);
+});
+
+// Optional: Validate search input on Enter
+searchInput.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    if (searchInput.value.trim() === "") {
+      alert("Please enter a product name.");
     } else {
-        greeting = "Good Evening! Browse your favorite items!";
+      alert("Searching for: " + searchInput.value);
     }
-    alert(greeting);
+  }
+});
 
-    // === 4. Back to Top Button ===
-    const topBtn = document.getElementById("topBtn");
-
-    if (topBtn) {
-        window.onscroll = function () {
-            topBtn.style.display =
-                document.documentElement.scrollTop > 300 ? "block" : "none";
-        };
-
-        topBtn.onclick = function () {
-            document.documentElement.scrollTop = 0;
-        };
-    }
+// Animated cart icon counter (demo only)
+const cartCount = document.querySelector(".cart-icon p");
+let count = 0;
+document.querySelectorAll('.box-content p a').forEach(link => {
+  link.addEventListener('click', () => {
+    count++;
+    cartCount.textContent = count;
+  });
 });
