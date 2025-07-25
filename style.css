@@ -329,3 +329,32 @@
 .copyright{
     margin-top: 20px;
 }
+
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ffc32c;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+#topBtn:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Optional sticky class for navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
