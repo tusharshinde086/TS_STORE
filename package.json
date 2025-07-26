@@ -1,0 +1,23 @@
+{
+  "name": "ts_store",
+  "version": "1.0.0",
+  "description": "creating webbsite clone using new tech\r # TS Store 🛒",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tusharshinde086/TS_STORE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tusharshinde086/TS_STORE/issues"
+  },
+  "homepage": "https://github.com/tusharshinde086/TS_STORE#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

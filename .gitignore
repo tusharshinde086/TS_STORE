@@ -1,0 +1,133 @@
+# -------------------------------------------------
+# Logs
+# -------------------------------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -------------------------------------------------
+# Runtime data / pids
+# -------------------------------------------------
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# -------------------------------------------------
+# Dependency directories
+# -------------------------------------------------
+node_modules/
+jspm_packages/
+
+# -------------------------------------------------
+# Build outputs
+# -------------------------------------------------
+dist/
+build/
+out/
+.tmp/
+.temp/
+.temp-*/
+.esbuild/
+.storybook-out/
+storybook-static/
+
+# Framework specific
+.next/
+.nuxt/
+.svelte-kit/
+.angular/
+.vite/
+.turbo/
+.parcel-cache/
+.rollup.cache/
+
+# Gatsby
+.cache/
+public/
+
+# Vue / Quasar
+.quasar/
+
+# Remix
+.build/
+
+# -------------------------------------------------
+# Test coverage & reports
+# -------------------------------------------------
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+cypress/videos/
+cypress/screenshots/
+
+# -------------------------------------------------
+# TypeScript
+# -------------------------------------------------
+*.tsbuildinfo
+
+# -------------------------------------------------
+# Linters / formatters caches
+# -------------------------------------------------
+.eslintcache
+.stylelintcache
+.prettier-cache
+
+# -------------------------------------------------
+# Environment files
+# (keep a template like .env.sample committed)
+# -------------------------------------------------
+.env
+.env.*
+!.env.sample
+!.env.example
+
+# -------------------------------------------------
+# OS / Editor junk
+# -------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# VSCode: ignore everything by default, optionally allow project-wide settings you want to share
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# JetBrains / IntelliJ
+.idea/
+*.iml
+
+# Others
+*.swp
+*.swo
+*.orig
+*.rej
+*.bak
+
+# -------------------------------------------------
+# Docker / local volumes (optional)
+# -------------------------------------------------
+docker-data/
+
+# -------------------------------------------------
+# Prisma / SQLite dev databases (optional)
+# -------------------------------------------------
+prisma/*.db
+
+# -------------------------------------------------
+# Serverless / Deploy targets
+# -------------------------------------------------
+.vercel/
+.netlify/
+.now/
+firebase-debug.log
+functions/node_modules/
+
+# Monorepo tools
+.pnpm-store/
