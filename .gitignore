@@ -81,10 +81,7 @@ cypress/screenshots/
 # Environment files
 # (keep a template like .env.sample committed)
 # -------------------------------------------------
-.env
-.env.*
-!.env.sample
-!.env.example
+
 
 # -------------------------------------------------
 # OS / Editor junk
